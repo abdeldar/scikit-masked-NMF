@@ -647,8 +647,8 @@ class BaseForest(MultiOutputMixin, BaseEnsemble, metaclass=ABCMeta):
             return np.zeros(self.n_features_in_, dtype=np.float64)
 
         all_importances = np.mean(all_importances, axis=0, dtype=np.float64)
-        return all_importances / np.sum(all_importances)
-
+        #return all_importances / np.sum(all_importances)
+        return all_importances
 
 def _accumulate_prediction(predict, X, out, lock):
     """
